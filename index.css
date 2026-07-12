@@ -121,7 +121,7 @@
     linear-gradient(90deg, var(--cream) 0%, var(--cream) 42%, rgba(246,241,230,0.55) 60%, rgba(246,241,230,0) 78%),
     url('./images/hero-banner.png');   /* swap in your actual background image path */
   background-size:cover;
-  background-position:center right;
+  background-position:center top;
 }
 
 .hero-inner{
@@ -273,7 +273,7 @@
   background-position:center;
   background-repeat:no-repeat;
 }
-.range-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.range-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
 .r-card{
   background:#ffff; border:1px solid var(--line); border-radius:20px;
   padding:16px 16px 22px; transition:transform .25s ease, box-shadow .25s ease;
@@ -500,12 +500,12 @@
   border-color:var(--paper);
 }
 
-.about-wrap{background:var(--paper);}
+/* .about-wrap{background-image: url(./images/about-bg.png);} */
 .about-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
 }
 .about-card{
-
+text-align: center;
   background:var(--forest);  
   border:1px solid var(--line);
   color: var(--paper);
@@ -518,7 +518,9 @@
   transform:translateY(-6px);
   box-shadow:0 16px 30px rgba(36,28,18,0.1);
 }
-.about-card .icon{font-size:2rem; margin-bottom:16px;}
+.about-card .icon{font-size:2rem; margin-bottom:16px;  display:block;
+  width:fit-content;
+  margin:0 auto 16px;}
 .about-card h4{
  font-size:1.15rem; color:var(--paper); margin-bottom:10px;
 }
@@ -663,4 +665,105 @@
     bottom:16px;
     right:16px;
   }
+}
+
+.trust-wrap{background-image: url(./images/about-bg.png);}
+.trust-content{
+  max-width:700px;
+  width:100%;
+  min-height:400px;           /* matches image height so nothing's cropped */
+  margin:0 auto;
+  text-align:center;
+  padding:36px 40px;
+  background-image:url(./images/trust.png);
+  background-size:cover;      /* was missing — this is the key fix */
+  background-position:center center;
+  background-repeat:no-repeat;
+  border-radius:20px;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.trust-content p{
+  font-size:1.05rem;
+  line-height:1.75;
+  color:var(--ink);
+  opacity:0.85;
+  width:340px;
+}
+
+@media (max-width:700px){
+  .trust-content{
+    padding:28px 24px;
+  }
+  .trust-content p{font-size:0.96rem;}
+}
+
+@media (max-width: 700px){
+  .range-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Read More button */
+.read-more-btn{
+  width:100%;
+  background:none;
+  border:none;
+  color:var(--forest);
+  font-weight:700;
+  font-size:0.82rem;
+  padding:8px 0;
+  cursor:pointer;
+  text-align:left;
+  transition:color .2s ease;
+}
+.read-more-btn:hover{color:var(--beet);}
+
+/* Expandable benefits list */
+.benefits-list{
+  list-style:none;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease, margin-bottom .35s ease;
+  margin-bottom:0;
+}
+.benefits-list.open{
+  max-height:220px;
+  margin-bottom:14px;
+}
+.benefits-list li{
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  font-size:0.82rem;
+  opacity:0.75;
+  padding:5px 0;
+}
+.benefits-list li::before{
+  content:'✓';
+  color:var(--leaf);
+  font-weight:700;
+  flex-shrink:0;
+}
+
+/* Discount-style pricing */
+.price-table .price{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-weight:700;
+  color:var(--beet);
+}
+.price-table .price s{
+  color:var(--ink);
+  opacity:0.4;
+  font-weight:400;
+  font-size:0.85em;
+}
+.price-table .tick{
+  color:var(--leaf);
+  font-style:normal;
+  font-size:0.9em;
 }

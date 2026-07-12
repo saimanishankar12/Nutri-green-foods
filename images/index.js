@@ -4,3 +4,9 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el)); 
   
  
+  function toggleBenefits(btn){
+    const list = btn.nextElementSibling;
+    const isOpen = list.classList.toggle('open');
+    btn.textContent = isOpen ? 'Read less ↑' : 'Read more ↓';
+  }
+
