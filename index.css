@@ -673,6 +673,7 @@ text-align: center;
   width:100%;
   min-height:400px;           /* matches image height so nothing's cropped */
   margin:0 auto;
+  margin-bottom: 60px;
   text-align:center;
   padding:36px 40px;
   background-image:url(./images/trust.png);
