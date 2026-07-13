@@ -2,7 +2,8 @@
 
 A single-page marketing website for **Nutri Green Foods**, a small-batch producer of natural, dehydrated fruit and vegetable powders (Moringa, ABC, Beetroot, Carrot, Apple, and more).
 
-![Uploading image.png…]()
+<img width="1920" height="6003" alt="image" src="https://github.com/user-attachments/assets/6c436ed3-7fc7-4c23-8439-6445b7fc78e5" />
+
 
 
 
